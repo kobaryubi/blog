@@ -18,6 +18,8 @@ Continuous integration: None
 Version control system: Git
 ```
 
+Editor: VS Code with the Vetur
+
 ## Build Setup
 
 ```bash
