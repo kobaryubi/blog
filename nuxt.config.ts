@@ -27,6 +27,11 @@ const nuxtConfig: NuxtConfig = {
 
   plugins: ['~/plugins/auth0.ts'],
 
+  auth0: {
+    domain: 'blog-dv.jp.auth0.com',
+    clientID: 'JxebYQvCQxU3QtL0Rou5IDpe0EvgDDMP'
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
