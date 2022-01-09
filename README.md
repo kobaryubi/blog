@@ -1,5 +1,23 @@
 # blog
 
+## Initial Setup
+
+```bash
+$ yarn create nuxt-app blog
+Project name: blog
+Programming language: TypeScript
+Package manager: Yarn
+UI framework: None
+Next.js modules: 
+Linting tools: ESLint, StyleLint
+Testing framework: Jest
+Rendering mode: Single Page App
+Deployment target: Static (Static/Jamstack hosting)
+Development tools:
+Continuous integration: None
+Version control system: Git
+```
+
 ## Build Setup
 
 ```bash
