@@ -3,13 +3,13 @@ import nuxtConfig from '~/nuxt.config'
 
 const config = nuxtConfig.auth0
 
-class Auth0Util {
+export class Auth0Util {
   showLock(container: any) {
     const lock = new Auth0Lock(config.clientID, config.domain, {
       container,
       closable: false,
       auth: {
-        responseType: 'tokenid_token',
+        responseType: 'token id_token',
         redirectUrl: this.getBaseUrl() + '/callback',
         params: { scope: 'openid profile email' }
       }
