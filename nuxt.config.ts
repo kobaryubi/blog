@@ -25,7 +25,7 @@ const nuxtConfig: NuxtConfig = {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  plugins: ['~/plugins/auth0.ts'],
+  plugins: ['~/plugins/auth0.ts', '~/plugins/constants.ts'],
 
   auth0: {
     domain: 'blog-dv.jp.auth0.com',

@@ -1,11 +1,28 @@
-<template>
-  <Tutorial />
+<template lang="pug">
+section.top-container
+  .content(v-if='loggedIn()')
+    h2 ログイン中です
+    NuxtLink.button.is-warning(to='/logout')
+      span.icon
+        i.fa.fa-sign-out
+      span Logout
+  .content(v-if='!loggedIn()')
+    h2 ログインしてください
+    NuxtLink.button.is-primary(to='/login')
+      span.icon
+        i.fa.fa-sign-in
+      span Login
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+  methods: {
+    loggedIn(): boolean {
+      // @ts-ignore
+      return this.$auth0.isAuthenticated()
+    }
+  }
 })
 </script>
