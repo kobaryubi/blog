@@ -43,11 +43,20 @@ const nuxtConfig: NuxtConfig = {
     '@nuxtjs/stylelint-module'
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/proxy', '@nuxtjs/axios'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+
+  axios: {
+    baseURL: '/'
+  }
+}
+
+if (process.env.NODE_ENV === 'development') {
+  nuxtConfig.proxy = {
+    '/api': 'http://localhost:3000'
+  }
 }
 
 export default nuxtConfig
