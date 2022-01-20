@@ -12,6 +12,7 @@ section.top-container
       span.icon
         i.fa.fa-sign-in
       span Login
+  button.button(@click='ping')= "Ping"
 </template>
 
 <script lang="ts">
@@ -22,6 +23,10 @@ export default Vue.extend({
     loggedIn(): boolean {
       // @ts-ignore
       return this.$auth0.isAuthenticated()
+    },
+    async ping() {
+      const ret = await this.$axios.$get('/api/ping/index')
+      console.log(ret)
     }
   }
 })
