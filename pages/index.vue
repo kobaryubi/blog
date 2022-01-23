@@ -24,7 +24,14 @@ export default Vue.extend({
     async ping() {
       const ret = await this.$axios.$get('/api/ping/index')
       console.log(ret)
-    }
-  }
+    },
+    async secured() {
+      const ret = await this.$axios.$get('/api/secured/index', {
+        // @ts-ignore
+        headers: { Authorization: `Bearer ${this.$auth0.getIdToken()}` },
+      })
+      console.log(ret)
+    },
+  },
 })
 </script>
