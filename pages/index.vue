@@ -2,17 +2,14 @@
 section.top-container
   .content(v-if='loggedIn()')
     h2 ログイン中です
-    NuxtLink.button.is-warning(to='/logout')
-      span.icon
-        i.fa.fa-sign-out
+    NuxtLink(to='/logout')
       span Logout
   .content(v-if='!loggedIn()')
     h2 ログインしてください
-    NuxtLink.button.is-primary(to='/login')
-      span.icon
-        i.fa.fa-sign-in
+    NuxtLink(to='/login')
       span Login
-  button.button(@click='ping')= "Ping"
+  button(@click='ping')= "Ping"
+  button(@click='secured')= "Secured"
 </template>
 
 <script lang="ts">
