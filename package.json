@@ -16,6 +16,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/proxy": "^2.1.0",
+    "@prettier/plugin-pug": "^1.19.2",
     "auth0-lock": "^11.32.0",
     "core-js": "^3.19.3",
     "jwt-decode": "^3.1.2",

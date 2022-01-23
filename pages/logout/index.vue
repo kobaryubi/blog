@@ -10,6 +10,6 @@ export default Vue.extend({
     // @ts-ignore
     this.$auth0.unsetToken()
     this.$router.replace('/')
-  }
+  },
 })
 </script>
