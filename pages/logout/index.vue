@@ -9,8 +9,7 @@ export default Vue.extend({
   mounted() {
     // @ts-ignore
     this.$auth0.unsetToken()
-    // @ts-ignore
-    this.$router.replace($PAGE_URL.TOP)
+    this.$router.replace('/')
   }
 })
 </script>
