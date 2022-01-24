@@ -1,5 +1,6 @@
 <template lang="pug">
 section.top-container
+  h1.title {{ title }}
   .content(v-if='loggedIn()')
     h2 ログイン中です
     NuxtLink(to='/logout')
@@ -14,8 +15,18 @@ section.top-container
 
 <script lang="ts">
 import Vue from 'vue'
+import HeadType from '@/types/HeadType'
+
+type TopDataType = {
+  title: string
+}
 
 export default Vue.extend({
+  data(): TopDataType {
+    return {
+      title: 'ブログ',
+    }
+  },
   methods: {
     loggedIn(): boolean {
       // @ts-ignore
@@ -32,6 +43,18 @@ export default Vue.extend({
       })
       console.log(ret)
     },
+  },
+  head(): HeadType {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'top',
+          name: 'blog',
+          content: 'blog',
+        },
+      ],
+    }
   },
 })
 </script>
