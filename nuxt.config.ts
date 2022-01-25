@@ -11,15 +11,15 @@ const nuxtConfig: NuxtConfig = {
   head: {
     title: 'blog',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,7 +29,7 @@ const nuxtConfig: NuxtConfig = {
 
   auth0: {
     domain: 'blog-dv.jp.auth0.com',
-    clientID: 'JxebYQvCQxU3QtL0Rou5IDpe0EvgDDMP'
+    clientID: 'JxebYQvCQxU3QtL0Rou5IDpe0EvgDDMP',
   },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +40,7 @@ const nuxtConfig: NuxtConfig = {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
   ],
 
   modules: ['@nuxtjs/proxy', '@nuxtjs/axios'],
@@ -49,13 +49,17 @@ const nuxtConfig: NuxtConfig = {
   build: {},
 
   axios: {
-    baseURL: '/'
-  }
+    baseURL: '/',
+  },
+
+  gtm: {
+    id: 'GTM-5WBX5CB',
+  },
 }
 
 if (process.env.NODE_ENV === 'development') {
   nuxtConfig.proxy = {
-    '/api': 'http://localhost:3000'
+    '/api': 'http://localhost:3000',
   }
 }
 
