@@ -43,7 +43,7 @@ const nuxtConfig: NuxtConfig = {
     '@nuxtjs/stylelint-module',
   ],
 
-  modules: ['@nuxtjs/proxy', '@nuxtjs/axios'],
+  modules: ['@nuxtjs/proxy', '@nuxtjs/axios', '@nuxtjs/gtm'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
