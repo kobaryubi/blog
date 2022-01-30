@@ -43,7 +43,7 @@ const nuxtConfig: NuxtConfig = {
     '@nuxtjs/stylelint-module',
   ],
 
-  modules: ['@nuxtjs/proxy', '@nuxtjs/axios'],
+  modules: ['@nuxtjs/proxy', '@nuxtjs/axios', '@nuxtjs/gtm'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -54,6 +54,12 @@ const nuxtConfig: NuxtConfig = {
 
   gtm: {
     id: 'GTM-5WBX5CB',
+  },
+
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
   },
 }
 
