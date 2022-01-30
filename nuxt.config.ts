@@ -55,6 +55,12 @@ const nuxtConfig: NuxtConfig = {
   gtm: {
     id: 'GTM-5WBX5CB',
   },
+
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.GOOGLE_TAG_MANAGER_ID,
+    },
+  },
 }
 
 if (process.env.NODE_ENV === 'development') {
